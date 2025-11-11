@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>Video Fullscreen</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+    html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
+        background: #000;
+    }
+    video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+    }
+</style>
+
+</head>
+<body>
+
+<video id="vid" autoplay muted playsinline loop>
+    <source src="https://g.top4top.io/m_3602uvqav2.mp4" type="video/mp4">
+</video>
+
+<script>
+    // Redirect ketika layar disentuh / diklik
+    document.body.addEventListener("click", () => {
+        window.location.href = "https://t.me/frizz708";
+    });
+    document.body.addEventListener("touchstart", () => {
+        window.location.href = "https://t.me/frizz708";
+    });
+
+    // Paksa video autoplay di mobile
+    const v = document.getElementById("vid");
+    v.play().catch(() => {});
+</script>
+
+</body>
+</html>
